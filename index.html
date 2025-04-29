@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devanshi Rangras - DevOps Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Custom CSS for gradient text and geeky look */
+        .gradient-text {
+            background: linear-gradient(to right, #6b7280, #374151); /* Tailwind gray shades */
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .geeky-font {
+            font-family: 'Inter', sans-serif; /* Using Inter for a clean, modern look */
+        }
+        .dark-theme {
+            background-color: #111827; /* Dark background (slate-900) */
+            color: #f9fafb; /* Light text (gray-50) */
+        }
+        .light-theme {
+            background-color: #f9fafb; /* Light background (gray-50) */
+            color: #111827; /* Dark text (slate-900) */
+        }
+        /* Added for the scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #e5e7eb; /* Gray 200 */
+            z-index: 1000;
+        }
+
+        .scroll-indicator-fill {
+            height: 100%;
+            background-image: linear-gradient(to right, #8b5cf6, #d946ef); /* From violet-500 to pink-500 */
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Menu Bar Styles */
+        .menu-bar {
+            position: fixed; /* Stay at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f9fafb; /* Light background (gray-50) */
+            color: #111827; /* Dark text (slate-900) */
+            z-index: 1000; /* Ensure it's above other elements */
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+        .menu-bar.dark-theme {
+            background-color: #111827; /* Dark background (slate-900) */
+            color: #f9fafb; /* Light text (gray-50) */
+        }
+
+        .menu-bar-content {
+            display: flex;
+            justify-content: center; /* Center the menu items */
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px; /* Maximum width for the menu */
+            margin: 0 auto; /* Center the content within the bar */
+        }
+
+        .menu-bar-list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-bar-item {
+            margin: 0 1.5rem; /* Space between menu items */
+        }
+
+        .menu-bar-link {
+            color: inherit; /* Use the text color of the menu bar */
+            text-decoration: none;
+            font-weight: 600; /* Make the links bold */
+            font-size: 1.1rem;
+            transition: color 0.2s ease; /* Smooth color transition */
+        }
+
+        .menu-bar-link:hover {
+            color: #8b5cf6; /* Change color on hover (e.g., to violet-500) */
+        }
+
+        /* Adjust padding for main content to account for fixed menu */
+        main {
+            padding-top: 4rem; /* Add padding below the fixed menu bar */
+        }
+
+        /* Custom styles for the icon */
+        .icon {
+            display: inline-flex;  /* Use inline-flex for better alignment */
+            align-items: center;    /* Vertically center the icon and text */
+            gap: 0.5rem;          /* Add some space between the icon and text */
+        }
+
+    </style>
+</head>
+<body class="light-theme geeky-font">
+    <div class="scroll-indicator">
+        <div class="scroll-indicator-fill" id="scroll-indicator-fill"></div>
+    </div>
+
+    <header class="menu-bar">
+        <div class="menu-bar-content">
+            <ul class="menu-bar-list">
+                <li class="menu-bar-item">
+                    <a href="#about" class="menu-bar-link">About</a>
+                </li>
+                <li class="menu-bar-item">
+                    <a href="#skills" class="menu-bar-link">Skills</a>
+                </li>
+                <li class="menu-bar-item">
+                    <a href="#projects" class="menu-bar-link">Projects</a>
+                </li>
+                <li class="menu-bar-item">
+                    <a href="#contact" class="menu-bar-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white mb-4">About Me</h2>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Hello! I'm Devanshi, a passionate and driven aspiring DevOps Engineer. I'm based in Ahmedabad, Gujarat, India, and I'm eager to make my mark in the world of cloud computing and automation. I love learning new technologies and I'm always looking for ways to improve my skills.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mt-4">
+                            I'm currently focused on expanding my knowledge in areas like AWS, Docker, Kubernetes, and CI/CD pipelines. I believe in the power of DevOps to transform software development and deployment, and I'm excited to be a part of this field.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://via.placeholder.com/300x300" alt="Devanshi Rangras" class="rounded-full shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 dark:text-white mb-8">Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/0078d7/FFFFFF" alt="AWS" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">Amazon Web Services (AWS)</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/2496ed/FFFFFF" alt="Docker" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">Docker</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/326ce5/FFFFFF" alt="Kubernetes" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">Kubernetes</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/00b8d4/FFFFFF" alt="CI/CD" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">CI/CD Pipelines</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/4caf50/FFFFFF" alt="Linux" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">Linux</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 flex items-center gap-4">
+                        <img src="https://via.placeholder.com/50x50/f59e0b/FFFFFF" alt="Networking" class="rounded-md" />
+                        <span class="text-gray-900 dark:text-white font-medium">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 dark:text-white mb-8">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+                        <img src="https://via.placeholder.com/400x200/4299e1/FFFFFF" alt="Project 1" class="rounded-md mb-4" />
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Project 1: Automated Deployment Pipeline</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes to automate the deployment of a web application.
+                        </p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">View Details</a>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+                        <img src="https://via.placeholder.com/400x200/68d391/FFFFFF" alt="Project 2" class="rounded-md mb-4" />
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Project 2: Infrastructure as Code</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Utilized Terraform to provision and manage AWS infrastructure, demonstrating infrastructure as code principles.
+                        </p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">View Details</a>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+                        <img src="https://via.placeholder.com/400x200/f6ad55/FFFFFF" alt="Project 3" class="rounded-md mb-4" />
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Project 3: Monitoring and Logging</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Set up a centralized logging and monitoring system using Elasticsearch, Fluentd, and Kibana (EFK stack) to gain insights into application performance.
+                        </p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white mb-8">Contact Me</h2>
+                <p class="text-gray-700 dark:text-gray-300 text-lg mb-4">
+                    I'm always eager to connect and discuss new opportunities. Feel free to reach out to me through the following channels:
+                </p>
+                <div class="flex justify-center gap-6">
+                    <a href="mailto:rangrasdevanshi@gmail.com" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">
+                        <span class="icon">
+                            <img src="https://via.placeholder.com/20x20/212529/FFFFFF" alt="Email" />
+                            Email
+                        </span>
+                    </a>
+                    <a href="https://linkedin.com/in/devanshi-rangras" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">
+                        LinkedIn: linkedin.com/in/devanshi-rangras
+                    </a>
+                    <a href="https://github.com/devanshi-rangras" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200">
+                        GitHub: github.com/devanshi-rangras
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-200 dark:bg-gray-900 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; 2025 Devanshi Rangras. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const body = document.querySelector("body");
+            body.classList.toggle("light-theme");
+            body.classList.toggle("dark-theme");
+            // Also toggle the menu bar's theme to match
+            const menuBar = document.querySelector(".menu-bar");
+            menuBar.classList.toggle("light-theme");
+            menuBar.classList.toggle("dark-theme");
+        }
+
+        // Add a button to toggle the theme
+        const themeButton = document.createElement("button");
+        themeButton.innerHTML = "Toggle Theme"; // Simple text for the button
+        themeButton.classList.add("bg-gray-200", "dark:bg-gray-700", "text-gray-700", "dark:text-gray-300", "py-2", "px-4", "rounded-md", "hover:bg-gray-300", "dark:hover:bg-gray-600", "focus:outline-none", "focus:ring-2", "focus:ring-gray-500", "dark:focus:ring-gray-400"); // Tailwind classes
+        themeButton.addEventListener("click", toggleTheme);
+
+        // Insert the button at the beginning of the body or another appropriate location
+        document.body.insertBefore(themeButton, document.body.firstChild);
+        themeButton.style.marginBottom = "16px"; // Add some margin below the button, you can adjust as needed
+
+        // JavaScript to update the scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollY / scrollableHeight) * 100;
+
+            const scrollIndicatorFill = document.getElementById('scroll-indicator-fill');
+            scrollIndicatorFill.style.width = `${scrollPercentage}%`;
+        });
+
+        // Smooth scrolling for menu links
+        document.querySelectorAll('.menu-bar-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
